@@ -5,6 +5,7 @@ import android.text.style.TtsSpan;
 
 import br.com.caelum.ichat.component.ChatComponent;
 import br.com.caelum.ichat.component.DaggerChatComponent;
+import br.com.caelum.ichat.module.ChatModule;
 
 /**
  * Created by felipepaiva on 10/02/17.
@@ -16,7 +17,7 @@ public class ChatApplication extends Application{
 
     @Override
     public void onCreate() {
-        component = DaggerChatComponent.builder().build();
+        component = DaggerChatComponent.builder().chatModule(new ChatModule(this)).build();
     }
 
     public ChatComponent getComponent(){
