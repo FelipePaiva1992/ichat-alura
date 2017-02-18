@@ -30,12 +30,13 @@ import retrofit2.Call;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import javax.inject.Inject;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int idDoCliente = 1;
+    private int idDoCliente = new Random().nextInt();
 
     @BindView(R.id.btn_enviar)
     Button button;

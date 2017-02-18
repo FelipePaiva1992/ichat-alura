@@ -31,7 +31,7 @@ public class ChatModule {
     public ChatService getChatService(){
         Retrofit retrofit = new Retrofit.Builder()
                 // Altere para o seu IP
-                .baseUrl("http://192.168.0.103:8080/")
+                .baseUrl("https://ichat-alura-felipe.herokuapp.com/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
